@@ -1,0 +1,12 @@
+---
+- name: Install nginx
+  hosts: localhost
+  remote_user: ubuntu
+  # remote_user: user
+  become: yes
+  become_method: sudo
+  vars_files: vault/vault.yml
+
+  roles:
+    - nginx
+
